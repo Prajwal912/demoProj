@@ -25,3 +25,11 @@ Route::get('/user', function(){
 Route::POST("/user", function(){
     return response()->json("post api hit successfully");
 });
+
+Route::delete("/user/{id}",function($id){
+ return response("delete" . $id, 200);
+});
+
+Route::put("/user/{id}", function($id){
+ return response("put" . $id, 200);
+});
